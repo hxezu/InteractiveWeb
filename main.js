@@ -37,39 +37,29 @@ window.onload=function(){
 let windowHeight = window.innerHeight
 initialize()
 
-const homeText = document.querySelector('.home_text')
-const homeIphone1 = document.querySelector('.home_image_container .iphone_wrap:first-of-type')
-const homeIphone2 = document.querySelector('.home_image_container .iphone_wrap:last-of-type')
-const homeText2 = document.querySelector('.home_text2')
+const profileTitle = document.querySelector('#profile')
+const decoText = document.querySelector('#deco')
+const profileBox = document.querySelector('.container #profileBox')
 
-
-// homeText가 50% 정도 뷰포트에 나왔을 경우 아래 함수 실행
+// profileTitle가 50% 정도 뷰포트에 나왔을 경우 아래 함수 실행
 let observer1 = new IntersectionObserver(entries=>{
     observer1cb(entries[0])
 },{root: null, threshold:0.5})
 
 const observer1cb = entry=>{
     if(entry.isIntersecting){
-        homeText.style.opacity = 1
-        homeText.style.animation = 'appear_from_bottom ease 1.5s'
-
-        // 화면에 시간간격마다 차례대로 화면에 요소를 띄움, 띄어지는 요소는 CSS animation 이 걸려있어서 부드럽게 동작
+        profileTitle.style.opacity = 1
+        profileTitle.style.animation = 'appear_from_bottom ease 1.5s'
+        profileBox.style.opacity = 1
+        profileBox.style.animation = 'appear_from_bottom ease 1.5s'
+        
         setTimeout(()=>{
-            homeIphone1.style.opacity = 1
-            homeIphone1.style.animation = 'appear_from_bottom ease 1.5s'
-            setTimeout(()=>{
-                homeIphone2.style.opacity = 1
-                homeIphone2.style.animation = `appear_from_bottom ease 1.5s`
-                setTimeout(()=>{
-                    homeText2.style.opacity = 1
-                    homeText2.style.animation = `appear_from_bottom ease 1.5s`
-                    observer1.unobserve(homeText)
-                },600)
-            },600)
-        },600)
+            decoText.style.animation = `appear_fade ease 1.5s forwards`
+            observer1.unobserve(profileTitle)
+        },1000)
     }
 }
-observer1.observe(homeText)
+observer1.observe(profileTitle)
 
 
 /*home 2*/
