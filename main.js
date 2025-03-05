@@ -62,9 +62,9 @@ const observer1cb = entry=>{
 observer1.observe(profileTitle)
 
 
-/*home 2*/
-const home2Text = document.querySelector('.home2_textwrap')
-const home2Contents = document.querySelectorAll('.home2_content')
+/*viewIntroContent*/
+const introTitle = document.querySelector('.introTitle')
+const introContent = document.querySelectorAll('.introContent')
 const home2Images = document.querySelectorAll('.home2_image_container')
 
 let observer2 = new IntersectionObserver(entries=>{
@@ -73,11 +73,11 @@ let observer2 = new IntersectionObserver(entries=>{
 
 const observer2cb = entry=>{
     if(entry.isIntersecting){
-        home2Text.style.animation = 'appear_from_bottom ease 1.5s'
-        home2Text.style.opacity = 1
+        introTitle.style.animation = 'appear_from_bottom ease 1.5s'
+        introTitle.style.opacity = 1
 
         setTimeout(()=>{
-            home2Contents.forEach(item=>{
+            introContent.forEach(item=>{
                 item.style.animation = 'appear_from_bottom ease 1.5s'
                 item.style.opacity = 1
             })
@@ -89,10 +89,10 @@ const observer2cb = entry=>{
                 })
             },600)
         },600)
-        observer2.unobserve(home2Text)
+        observer2.unobserve(introTitle)
     }
 }
-observer2.observe(home2Text)
+observer2.observe(introTitle)
 
 
 /*home 3*/

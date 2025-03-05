@@ -25,7 +25,6 @@
 }
 
 
-
 @keyframes appear {
   from {
     opacity: 0;
@@ -319,111 +318,56 @@ p{
 }
 
 
-/* home2 section*/
-.home2_wrap {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+/* viewIntroContent section*/
+#viewIntroContent{
+  margin-top: 300px;
 }
 
-.home2_textwrap {
+.introTitle{
   opacity: 0;
-
 }
 
-.home2_container {
-  width: 100%;
-  background-color: white;
-  padding: 200px 0;
-
-}
-
-.home2_container_inner {
-  width: 92%;
-  height: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-
-}
-
-.home2_flex_container {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-.home2_item {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 120px;
-}
-
-.home2_item div {
-  flex-basis: calc(50% - 30px);
-  max-width: calc(50% - 30px);
-}
-
-.home2_content {
-  margin-left: 40px;
+.introContent{
   opacity: 0;
-
 }
 
-.home2_image_container {
-  margin-right: 40px;
-  opacity: 0;
-
+#viewIntroContent>div{
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
-.home2_image_container img {
-  width: 100%;
+#viewIntroContent>div>p:first-child{
+  color: #FFFFFF;
+  text-shadow: -1px 0 #202632, 0 1px #202632, 1px 0 #202632, 0 -1px #202632;
 }
 
-.home2_textwrap h1 {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.3;
-  color: #3182f6;
-  margin-bottom: 30px;
+#viewIntroContent>div>p:last-child{
+  position: absolute;
+  color: #202632;
+  z-index: -1;
+  top: 6px;
+  left: 8px;
 }
 
-.home2_textwrap h2 {
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 1.4;
-  color: #191f28;
+#viewIntroContent p{
+  margin: 0;
 }
 
-.home2_textwrap h2:last-of-type {
-  margin-bottom: 80px;
+#viewIntroContent>div:last-child{
+  margin-top: 50px;
+  margin-left: 100px;
+  line-height: 1.6;
+  font-size: 1.1em;
 }
 
-.home2_content h1 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: rgb(49, 130, 246);
-}
-
-.home2_content h2 {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.4;
-  color: rgb(51, 61, 75);
-}
-
-.home2_content h2:last-of-type {
-  margin-bottom: 30px;
-}
-
-.home2_content h3 {
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.5;
-  color: rgb(107, 118, 132);
+#link{
+  display: inline-block;
+  margin: 60px 0 0;
+  padding: 0;
+  color: #202632;
+  text-decoration: none;
+  border-bottom: 1px solid #202632;
 }
 
 /* home3 section */
