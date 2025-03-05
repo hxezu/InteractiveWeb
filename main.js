@@ -13,12 +13,26 @@ const initialize = ()=>{
     history.scrollRestoration = "manual";
 }
 
-const introWrap = document.querySelector('.intro_wrap')
-const introContainer = document.querySelector('.intro_container')
+//viewLogo
+const text = "HYUN HYEJU";
+const titleElement = document.getElementById("title");
+const caretElement = document.querySelector(".caret");
 
-setTimeout(()=>{
-    introContainer.style.display = "block"
-}, 400)
+let index=0;
+function typeText(){
+    if(index <text.length){
+        titleElement.innerHTML+=text.charAt(index);
+        index++;
+        setTimeout(typeText,120);
+    }else {
+        caretElement.style.display = "inline-block";
+    }
+}
+
+window.onload=function(){
+    typeText();
+};
+
 
 let windowHeight = window.innerHeight
 initialize()
