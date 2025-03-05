@@ -56,7 +56,7 @@ const observer1cb = entry=>{
         setTimeout(()=>{
             decoText.style.animation = `appear_fade ease 1.5s forwards`
             observer1.unobserve(profileTitle)
-        },1000)
+        },1200)
     }
 }
 observer1.observe(profileTitle)
