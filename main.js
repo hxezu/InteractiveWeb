@@ -95,6 +95,32 @@ const observer2cb = entry=>{
 observer2.observe(introTitle)
 
 
+/*viewEducation*/
+const walls = document.querySelectorAll('.viewEdu_wall')
+const viewEduWall = document.querySelector('.viewEdu_wallpaper')
+let difference
+const viewEduWidthControlHandler=()=>{
+    difference = windowHeight - viewEduWall.getBoundingClientRect().top
+
+    if(difference<=150){
+        walls.forEach(item=>
+            item.style.width = '200px'
+        )
+    }else if(difference>150 && difference<700){
+        walls.forEach(item=>
+            item.style.width = `${-(4/11)*difference + 255 }px`
+        )
+    }else if(difference>=700){
+        walls.forEach(item=>
+            item.style.width ='0px'
+        )
+    }
+}
+
+window.addEventListener('scroll',viewEduWidthControlHandler)
+
+
+
 /*home 3*/
 const home3Text = document.querySelector('.home3_textwrap')
 const home3ImageContainer = document.querySelector('.home3_image_container .iphone_wrap')
@@ -202,29 +228,6 @@ observer5.unobserve(home5Text)
 
 /* home5 스크롤에 따른 아이콘 등장 이벤트*/ 
 
-/*home 6*/
-const walls = doocument.querySelectorAll('.home6_wall')
-const home6wall = document.querySelector('.home6_wallpaper')
-let difference
-const home6WidthControlHandler = ()=>{
-    difference = windowHeight - home6wall.getBoundingClientRect().top
-
-    if(difference<=150){
-        walls.forEach(item=>
-            item.style.width = '200px'
-        )
-    }else if(difference>150 && difference<700){
-        walls.forEach(item=>
-            item.style.width='${-(4/11)*difference + 255 }px'
-        )
-    }else if(difference>=700){
-        walls.forEach(item=>
-            item.style.width = '0px'
-        )
-    }
-}
-
-window.addEventListener('scroll', home6WidthControlHandler)
 
 const home6Content1Img = document.querySelector('.home6_content1 img')
 const home6Content1Text = document.querySelector('.home6_content1_textwrap')

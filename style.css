@@ -370,6 +370,63 @@ p{
   border-bottom: 1px solid #202632;
 }
 
+/* viewEducation */
+
+#viewEducation{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.viewEdu_container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 160px 0;
+}
+
+.viewEdu_wallpaper{
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  background-color: #0064FF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.viewEdu_wallpaper h1{
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #f9fafb;
+  text-align: center;
+}
+
+.viewEdu_wallpaper_wall{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.viewEdu_wall{
+  height: 100%;
+  width: 200px;
+  background-color: white;
+}
+
 /* home3 section */
 
 .home3_wrap {
