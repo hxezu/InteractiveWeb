@@ -140,39 +140,6 @@
     color: rgb(0, 0, 0);
   }
   
-  .intro_mobile_wrap{
-    display:flex;
-    justify-content: center;
-  }
-  
-  .store_button{
-    height: 40px;
-    border-radius:10px;
-    background-color: rgba(0, 12, 30, 0.8);
-    font-weight: 600;
-    text-align: center;
-    margin: 5px;
-    padding: 5px 10px;
-    font-size: 17px;
-  }
-  
-  .store_button a{
-    position: relative;
-    top:10%;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-  
-  .store_button span{
-  
-    color:white;
-  }
-  
-  .store_button img{
-    height: 30px;
-    margin-right: 10px;
-  }
   /* intro2 section*/
   
   .intro2_wrap2{
