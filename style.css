@@ -388,7 +388,7 @@ p{
 .viewEdu_wallpaper{
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 150px;
   overflow: hidden;
   background-color: #0064FF;
   background-size: cover;
@@ -398,13 +398,13 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .viewEdu_wallpaper h1{
   font-family: "Black Han Sans", sans-serif;
-  font-size: 100px;
-  font-weight: 700;
+  font-size: 80px;
+  font-weight: 500;
   line-height: 1.3;
   color: #f9fafb;
   text-align: center;
@@ -427,49 +427,19 @@ p{
   background-color: white;
 }
 
-/* home3 section */
-
-.home3_wrap {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.home3_container {
-  width: 100%;
-  padding: 200px 0;
-}
-
-.home3_container_inner {
+.viewEdu_container_inner{
   width: 92%;
   max-width: 1140px;
   margin: 0 auto;
   position: relative;
 }
 
-.home3_textwrap {
-  opacity: 0;
+.viewEdu_content{
+  height: 100%;
 }
 
-.home3_image_container {
-  position: absolute;
-  top: -10%;
-  right: 50%;
-}
 
-.home3_image_container .iphone_wrap {
-  opacity: 0;
-}
-
-.home3_container h1 {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.3;
-  color: #3182f6;
-  margin-bottom: 20px;
-}
-
-.home3_container h2 {
+.viewEdu_container h2 {
   font-size: 50px;
   font-weight: 700;
   line-height: 1.4;
@@ -477,39 +447,49 @@ p{
   font-family: Noto Sans;
 }
 
-.home3_container h3 {
-  font-size: 48px;
+.viewEdu_container h3 {
+  padding-top: 20px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
+}
+
+.education{
+  width: 100%;
+  display: flex;
   opacity: 0;
 }
 
-.home3_container span {
-  color: rgb(51, 61, 75);
+.education>div{
+  float: left;
+  padding-left: 100px;
+  padding-top: 30px;
 }
 
-.home3_container .gray_text {
+.viewEdu_content span {
+  color: rgb(51, 61, 75);
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.viewEdu_content .gray_text {
   color: #8b95a1;
 }
 
-.home3_container .light_gray_text {
+.viewEdu_content .light_gray_text {
   color: #d1d6db
 }
 
-.home3_container p {
-  font-size: 23px;
-  font-weight: 600;
-  line-height: 1.5;
-  color: rgb(51, 61, 75);
-  opacity: 0;
+.viewEdu_container_inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 150px;
 }
 
-.home3_textwrap2 {
-  margin-top: 200px;
-}
-
-.home3_textwrap2 p:first-of-type {
-  margin-top: 40px;
+.edu_institution{
+  width: 480px;
 }
 
 /* home4 section */

@@ -119,45 +119,31 @@ const viewEduWidthControlHandler=()=>{
 
 window.addEventListener('scroll',viewEduWidthControlHandler)
 
+const eduText = document.querySelector('.viewEdu_content')
+const kuText = document.querySelector('#KU')
+const ctuText = document.querySelector('#CTU')
 
-
-/*home 3*/
-const home3Text = document.querySelector('.home3_textwrap')
-const home3ImageContainer = document.querySelector('.home3_image_container .iphone_wrap')
-const home3P = document.querySelector('.home3_textwrap2 p')
-const home3TextSpans = document.querySelectorAll('.home3_textwrap2 h3')
-
-let observer3 = new IntersectionObserver(entries=>{
-    observer3cb(entries[0])
+let observer31 = new IntersectionObserver(entries=>{
+    observer31cb(entries[0])
 })
-const observer3cb = entry=>{
+const observer31cb = entry=>{
     if(entry.isIntersecting){
-        home3Text.style.animation = 'appear_from_bottom ease 1.5s'
-        home3Text.style.opacity = 1
+        eduText.style.animation = 'appear_from_bottom ease 1.5s'
+        eduText.style.opacity = 1
+
         setTimeout(()=>{
-            home3ImageContainer.style.animation = 'appear_from_bottom ease 1.5s'
-            home3ImageContainer.style.opacity = 1
-            setTimeout(()=>{
-                home3P.style.animation = 'appear_from_bottom ease 1.5s'
-                home3P.style.opacity = 1
-                setTimeout(()=>{
-                    home3TextSpans[0].style.animation = 'appear_from_bottom ease 1.5s'
-                    home3TextSpans[0].style.opacity = 1
-                    setTimeout(()=>{
-                        home3TextSpans[1].style.animation = 'appear_from_bottom ease 1.5s'
-                        home3TextSpans[1].style.opacity = 1
-                        setTimeout(()=>{
-                            home3TextSpans[2].style.animation = 'appear_from_bottom ease 1.5s'
-                            home3TextSpans[2].style.opacity = 1
-                        },600)
-                    },600)
-                },600)
-            },600)
+            kuText.style.animation = 'appear_from_bottom ease 1.5s'
+            kuText.style.opacity = 1
+            setTimeout(() => {
+                ctuText.style.animation = 'appear_from_bottom ease 1.5s'
+                ctuText.style.opacity = 1
+            }, 600);
         },600)
-        observer3.unobserve(home3Text)
+        observer31.unobserve(eduText)
     }
 }
-observer3.observe(home3Text)
+observer31.observe(eduText)
+
 
 
 
