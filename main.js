@@ -123,10 +123,10 @@ const eduText = document.querySelector('.viewEdu_content')
 const kuText = document.querySelector('#KU')
 const ctuText = document.querySelector('#CTU')
 
-let observer31 = new IntersectionObserver(entries=>{
-    observer31cb(entries[0])
+let observer3 = new IntersectionObserver(entries=>{
+    observer3cb(entries[0])
 })
-const observer31cb = entry=>{
+const observer3cb = entry=>{
     if(entry.isIntersecting){
         eduText.style.animation = 'appear_from_bottom ease 1.5s'
         eduText.style.opacity = 1
@@ -139,179 +139,61 @@ const observer31cb = entry=>{
                 ctuText.style.opacity = 1
             }, 600);
         },600)
-        observer31.unobserve(eduText)
+        observer3.unobserve(eduText)
     }
 }
-observer31.observe(eduText)
+observer3.observe(eduText)
 
 
 
-
-/*home 4*/
-const home4Text = document.querySelector('.home4_textwrap')
-const home4Contents = document.querySelectorAll('.home4_content_textwrap')
-const home4Images = document.querySelectorAll('.home4_content img')
+/*viewSkill*/
+const skillTitle = document.querySelector('#skillTitle')
+const skillList = document.querySelector('#skillWrapper')
 
 let observer4 = new IntersectionObserver(entries=>{
     observer4cb(entries[0])
-},{threshold:0.5})
+},{root: null, threshold:0.5})
 
 const observer4cb = entry=>{
     if(entry.isIntersecting){
-        home4Text.style.animation = 'appear_from_bottom ease 1.5s'
-        home4Text.style.opacity = 1
-        setTimeout(()=>{
-            home4Contents.forEach(item=>{
-                item.style.animation = 'appear_from_bottom ease 1.5s'
-                item.style.opacity = 1
-            })
-            setTimeout(()=>{
-                home4Images.forEach(item=>{
-                    item.style.animation = 'appear_from_bottom ease 1.5s'
-                    item.style.opacity = 1
-                })
-            },600)
-        },600)
-        observer4.unobserve(home4Text)
-    }
-}
-observer4.observe(home4Text)
-
-
-
-
-/*home 5*/
-const home5Text = document.querySelector('.home5_textwrap')
-const home5P1 = document.querySelector('.home5_content_text_inner p:first-of-type')
-const home5P2 = document.querySelector('.home5_content_text_inner p:last-of-type')
-const home5Text2 = document.querySelector('.home5_textwrap2')
-
-let observer5 = new IntersectionObserver(entries=>{
-    observer5cb(entries[0])
-},{threshold:0.5})
-
-const observer5cb = entry=>{
-    if(entry.isIntersecting){
-        home5Text.style.animation = 'appear_from_bottom ease 1.5s'
-        home5Text.style.opacity = 1
-
-        setTimeout(()=>{
-            home5P1.style.animation = 'appear_from_bottom ease 1.5s'
-            home5P1.style.opacity = 1
-            setTimeout(()=>{
-                home5P2.style.animation = 'appear_from_bottom ease 1.5s'
-                home5P2.style.opacity = 1   
-                setTimeout(()=>{
-                    home5Text2.style.animation = 'appear_from_bottom ease 1.5s'
-                    home5Text2.style.opacity = 1                    
-                },600)
-            },600)
-        }, 600)
-        observer5.unobserve(home5Text)
-    }
-}
-observer5.unobserve(home5Text)
-
-/* home5 스크롤에 따른 아이콘 등장 이벤트*/ 
-
-
-const home6Content1Img = document.querySelector('.home6_content1 img')
-const home6Content1Text = document.querySelector('.home6_content1_textwrap')
-const home6Content2Img = document.querySelector('.home6_content2 > img')
-const home6Text = document.querySelector('.home6_textwrap h2')
-const home6Content2Item = document.querySelector('.home6_content2_item')
-const home6Content3Img = document.querySelector('.home6_content3 img')
-const home6Text2 = document.querySelector('.home6_textwrap2')
-
-const home6OpacityEvent = (item)=>{
-    let difference = windowHeight - item.getBoundingClientRect().top
-    if(difference > 150 && difference < item.offsetHeight+200){
-        item.style.opacity = (difference-150)/(item.offsetHeight+50)
-    }else if(difference > item.offsetHeight+200){
-        item.style.opacity =1
-    }else{
-        item.style.opacity = 0
-    }
-}
-
-const home6OpacityTransitionEvent = (item)=>{
-    let difference = windowHeight - item.getBoundingClientRect().top
-    if(difference > 150 && difference < item.offsetHeight+200){
-        item.style.opacity = (difference-150)/(item.offsetHeight+50)
-        item.style.transform = `translateY(${-100*(difference-150)/(item.offsetHeight+50)}px)`
-    }else if(difference > item.offsetHeight+200){
-        item.style.opacity =1
-    }else{
-        item.style.opacity = 0
-    }
-}
-
-const home6ScrollHandler = ()=>{
-    home6OpacityEvent(home6Content1Img)
-    home6OpacityEvent(home6Content1Text)
-    home6OpacityEvent(home6Content2Img)
-    home6OpacityEvent(home6Text)
-    home6OpacityEvent(home6Content3Img)
-    home6OpacityEvent(home6Text2)
-    home6OpacityTransitionEvent(home6Content2Item)
-}
-
-window.addEventListener('scroll', home6ScrollHandler)
-
-
-
-
-/*home 7*/
-const home7Text = document.querySelector('.home7_textwrap')
-const home7Contents = document.querySelectorAll('.home7_content')
-
-const observer7 = new IntersectionObserver(entries=>{
-  observer7cb(entries[0])
-},{threshold:0.5})
-
-const observer7cb = entry=>{
-    if(entry.isIntersecting){
-        home7Text.style.animation = 'appear_from_bottom ease 1.5s'
-        home7Text.style.opacity = 1
+        skillTitle.style.opacity = 1
+        skillTitle.style.animation = 'appear_from_bottom ease 1.5s'
         
         setTimeout(()=>{
-          home7Contents.forEach(item=>{
-            item.style.animation = 'appear_from_bottom ease 1.5s'
-            item.style.opacity = 1
-          }) 
-        },600)
-        observer7.unobserve(home7Text)
-      }
-      observer7.observe(home7Text)
+            skillList.style.opacity = 1
+            skillList.style.animation = 'appear_from_bottom ease 1.5s'
+            decoText.style.animation = `appear_fade ease 1.5s forwards`
+            observer4.unobserve(skillTitle)
+        },1200)
+    }
 }
-observer7.observe(home7Text)
+observer4.observe(skillTitle)
 
+const menuItems = document.querySelectorAll('.s-menu-item');
+const skillCategories = document.querySelectorAll('.skill-category');
 
+menuItems.forEach(menuItem=>{
+    menuItem.addEventListener('click',(e)=>{
+        e.preventDefault();
 
-/*home 8*/
-const home8Img = document.querySelector('.home8_container img')
-const home8Text = document.querySelector('.home8_textwrap')
-const home8Content = document.querySelector('.home8_content')
+        skillCategories.forEach(category=>{
+            category.style.display = 'none';
+        });
 
-let observer8 = new IntersectionObserver(entries=>{
-  observer8cb(entries[0])
-},{threshold:0.4})
+        const targetId = menuItem.getAttribute('href').substring(1);
+        const targetCategory = document.getElementById(targetId);
+        targetCategory.style.display = 'block';
 
-const observer8cb = entry => {
-  if(entry.isIntersecting){
-    home8Img.style.animation = 'appear_from_bottom ease 1.5s'
-    home8Img.style.opacity = 1
-    
-    setTimeout(()=>{
-      home8Text.style.animation = 'appear_from_bottom ease 1.5s'
-      home8Text.style.opacity = 1
-  
-      setTimeout(()=>{
-        home8Content.style.animation = 'appear_from_bottom ease 1.5s'
-        home8Content.style.opacity = 1
-      },600)
-    },600)
-    observer8.unobserve(home8Img)
-  }
-}
-observer8.observe(home8Img)
+        menuItems.forEach(item=>{
+            item.classList.remove('selected');
+        });
+        menuItem.classList.add('selected');
+    });
+});
+
+window.addEventListener('load', ()=>{
+    const defaultMenu = document.getElementById('languageMenu');
+    defaultMenu.classList.add('selected');
+    const defaultCategory = document.getElementById('language');
+    defaultCategory.style.display = 'block';
+});
